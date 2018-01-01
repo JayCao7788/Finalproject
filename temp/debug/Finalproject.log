@@ -1,29 +1,13 @@
-﻿已經開始建置於 2018/1/1 下午 11:48:07。
+﻿已經開始建置於 2018/1/1 下午 11:53:44。
      1>節點 2 (Build 目標) 上的專案 "C:\Users\USER\Desktop\Finalproject\Finalproject\Finalproject\Finalproject.vcxproj"。
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(356,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(357,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\..\include /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"..\..\temp\debug\\" /Fd"..\..\temp\debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\source\main.c
          main.c
-     1>c:\users\user\desktop\finalproject\source\main.c(6): warning C4013: 'srand' 未定義; 假設 extern 傳回整數
-     1>c:\users\user\desktop\finalproject\source\main.c(6): warning C4013: 'time' 未定義; 假設 extern 傳回整數
-     1>c:\users\user\desktop\finalproject\source\main.c(6): error C2065: 'NULL' : 未宣告的識別項
-     1>c:\users\user\desktop\finalproject\source\main.c(8): warning C4013: 'rand' 未定義; 假設 extern 傳回整數
-     1>c:\users\user\desktop\finalproject\source\main.c(37): error C2065: 'buf' : 未宣告的識別項
-     1>c:\users\user\desktop\finalproject\source\main.c(37): error C2109: 註標必須使用在陣列或指標類型上
-     1>c:\users\user\desktop\finalproject\source\main.c(38): error C2065: 'buf' : 未宣告的識別項
-     1>c:\users\user\desktop\finalproject\source\main.c(38): error C2109: 註標必須使用在陣列或指標類型上
-     1>c:\users\user\desktop\finalproject\source\main.c(45): error C2065: 'buf' : 未宣告的識別項
-     1>c:\users\user\desktop\finalproject\source\main.c(45): error C2109: 註標必須使用在陣列或指標類型上
-     1>c:\users\user\desktop\finalproject\source\main.c(46): error C2065: 'buf' : 未宣告的識別項
-     1>c:\users\user\desktop\finalproject\source\main.c(46): error C2109: 註標必須使用在陣列或指標類型上
-     1>c:\users\user\desktop\finalproject\source\main.c(48): error C2065: 'a' : 未宣告的識別項
-     1>c:\users\user\desktop\finalproject\source\main.c(48): error C2109: 註標必須使用在陣列或指標類型上
-     1>c:\users\user\desktop\finalproject\source\main.c(52): error C2065: 'a' : 未宣告的識別項
-     1>c:\users\user\desktop\finalproject\source\main.c(52): error C2109: 註標必須使用在陣列或指標類型上
-     1>cl : 命令列 warning D9028: 最少重建失敗，還原成一般建置
+     1>c:\users\user\desktop\finalproject\source\main.c(3): error C2059: 語法錯誤 : 'while'
      1>專案 "C:\Users\USER\Desktop\Finalproject\Finalproject\Finalproject\Finalproject.vcxproj" (Build 目標) 建置完成 -- 失敗。
 
 建置失敗。
 
-經過時間 00:00:00.72
+經過時間 00:00:00.63

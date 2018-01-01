@@ -1,56 +1,76 @@
-char AI()
+/* 玩家VS電腦 */
+
+while (mode == 2)
 {
-	int a, b;
-	char c1, c2;
-
-	srand(time(NULL));
-
-	a = rand() % 3;
-	b = rand() % 3;
-
-	switch (a)
+	show_position();
+	do
 	{
-	case 0:
-		c1 = '1';
-		break;
-	case 1:
-		c1 = '2';
-		break;
-	case 2:
-		c1 = '3';
-		break;
+		show_position();
+		if (player == 1)
+		{
+			AI();
+			w = AI_check();
+
+			while (w == 1)
+			{
+				AI();
+				w = AI_check();
+			}
+
+			printf("\n輪到電腦選擇!!\n\n");
+			system("pause");
+		}
+
+		if (player == 0)
+		{
+			printf("\n玩家選擇一個位子 (例如: 1A; 按 E 離開~): ");
+			scanf("%s", &buf);
+
+			if (buf[0] == 'E')
+			{
+				printf("\n本局平手!\n");
+				system("pause");
+				return;
+			}
+		}
+
+		i = buf[0] - '1';
+		j = buf[1] - 'A';
+
+		if ((i < 0) || (2 < i) || (j < 0) || (2 < j))
+		{
+			continue;
+		}
+
+		if (a[i][j] > 0)
+		{
+			continue;
+		}
+
+		a[i][j] = player + 1;
+		player = 1 - player;
+		done = check();
+		pp++;
+
+	} while ((done == 0) && (pp < 9));
+
+	printf("\n");
+	show_position();
+	player = 1 - player;
+
+	if (done == 1)
+		printf("\n玩家贏!\n\n", player);
+	else if (pp == 9 && done == 0)
+	{
+		printf("\n本局平手!\n");
+		system("pause");
+		return;
+	}
+	else
+	{
+		printf("\n電腦贏!\n");
 	}
 
-	switch (b)
-	{
-	case 0:
-		c2 = 'A';
-		break;
-	case 1:
-		c2 = 'B';
-		break;
-	case 2:
-		c2 = 'C';
-		break;
-	}
-
-	buf[0] = c1;
-	buf[1] = c2;
-}
-
-int AI_check(void)
-{
-	int x, y;
-
-	x = buf[0] - '1';
-	y = buf[1] - 'A';
-
-	if (a[x][y] == 1 || a[x][y] == 2)
-	{
-		return 1;
-	}
-	else if (a[x][y] == 0)
-	{
-		return 0;
-	}
+	system("pause");
+	return;
 }
